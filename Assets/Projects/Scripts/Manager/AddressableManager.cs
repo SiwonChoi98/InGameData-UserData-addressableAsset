@@ -12,7 +12,6 @@ public class AddressableManager : MonoBehaviour
     private List<GameObject> _GsList = new List<GameObject>();
     private void Start()
     {
-        StartCoroutine(InitAddressable());
         SpawnObj();
     }
 
@@ -20,14 +19,7 @@ public class AddressableManager : MonoBehaviour
     {
         ReleaseObj();
     }
-
-    //어드레서블 초기화 (혹시나 안될 수 있어서 막기위해 사용)
-    private IEnumerator InitAddressable()
-    {
-        var init = Addressables.InitializeAsync();
-        yield return init;
-    }
-
+    
     private void SpawnObj()
     {
         _test1Obj.InstantiateAsync().Completed += (obj) =>

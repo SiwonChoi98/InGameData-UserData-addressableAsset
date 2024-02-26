@@ -63,7 +63,7 @@ MonoBehaviour:
       - m_Id: 73af480495da77049baf642da9f0bc05
         m_Value: ServerData/[BuildTarget]
       - m_Id: a121de22168493b448ef7297d9d6a2a3
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: https://s3.ap-northeast-2.amazonaws.com/pro.addressable/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: 5fd6d3ad5fe41224c87c62eaddba7127
       m_Name: BuildTarget

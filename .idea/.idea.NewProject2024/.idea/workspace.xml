@@ -6,13 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Init.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scenes/Init.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Init.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Init.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Loading.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scenes/Loading.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/AddressableManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/AddressableManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Make.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scenes/Make.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/InitManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/InitManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerData/StandaloneWindows64/catalog_2024.02.25.12.26.20.hash" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerData/StandaloneWindows64/catalog_2024.02.25.12.26.20.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +34,6 @@
       </branch-storage>
     </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/Manager/DownManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -119,7 +116,8 @@
       <workItem from="1708784189954" duration="354000" />
       <workItem from="1708784556517" duration="74000" />
       <workItem from="1708863441080" duration="4706000" />
-      <workItem from="1708913082455" duration="2523000" />
+      <workItem from="1708913082455" duration="4620000" />
+      <workItem from="1709008428162" duration="4946000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료">
       <option name="closed" value="true" />
@@ -137,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708864586665</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[Feat_Test] 어드레서블 서버 에셋 테스트 완료">
+      <option name="closed" value="true" />
+      <created>1708918639606</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708918639606</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +167,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료" />
     <MESSAGE value="[Feat_Asset] 추가 유닛 생성 에셋 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Feat_Asset] 추가 유닛 생성 에셋 추가" />
+    <MESSAGE value="[Feat_Test] 어드레서블 서버 에셋 테스트 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Feat_Test] 어드레서블 서버 에셋 테스트 완료" />
   </component>
 </project>

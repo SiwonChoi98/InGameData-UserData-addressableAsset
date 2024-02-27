@@ -3,33 +3,68 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Slider = UnityEngine.UI.Slider;
 
-public class InitManager : MonoBehaviour
+public class SplashUI : MonoBehaviour
 {
+    //priave------------------------------------------
     [Header("UI")]
-    public GameObject WaitMessege;
-    public GameObject DownMessege;
-
-    public Slider DownSlider;
-    public Text SizeInfoTxt;
-    public Text DownValTxt;
-
-    [Header("Label")] 
-    public AssetLabelReference DefaultLabel;
+    [SerializeField] private GameObject _DownMessege;
+    [SerializeField] private GameObject _guestLoginObj;
+        
+    [SerializeField] private Slider _downSlider;
+    [SerializeField] private Text _waitMessegeTxt;
+    [SerializeField] private Text _sizeInfoTxt;
+    [SerializeField] private Text _downValTxt;
+    
     private long _patchSize;
+    
     //패치의 크기를 저장하고 관리하는 용도
     private Dictionary<string, long> _patchMap = new Dictionary<string, long>();
-    private void Start()
+    
+    //씬 이동 상태
+    private bool _isSuccess = false;
+    private bool _isUserData = false;
+    
+    //public------------------------------------------
+    [Header("Label")] 
+    public AssetLabelReference DefaultLabel;
+    
+    private IEnumerator Start()
     {
-        WaitMessege.SetActive(true);
-        DownMessege.SetActive(false);
+        _isSuccess = false;
+        _isUserData = false;
+        _waitMessegeTxt.text = "Update Check...";
         
-        StartCoroutine(InitAddressable());
-        StartCoroutine(CheckUpdateFiles());
+        _waitMessegeTxt.gameObject.SetActive(true);
+        _guestLoginObj.SetActive(false);
+        _DownMessege.SetActive(false);
+        
+        //네트워크가 제대로 작동하고 있는지 체크 (루프)
+        
+        //어드레서블 초기화
+        yield return InitAddressable();
+        
+        //업데이트 파일 있는지 체크 (AWS 에서 받음)
+        yield return CheckUpdateFiles();
+        
+        //로그인 창 띄움 //게스트 로그인
+        
+        //로그인 시 정보 있는지 없는지 체크
+        
+        //씬 이동 가능 상태 버튼/텍스트 활성화
+        _guestLoginObj.SetActive(true);
     }
 
+    public void Button_MoveToMain()
+    {
+        //계정 체크 후 이동
+        if(_isSuccess && _isUserData) LoadingManager.LoadScene("Make");
+        else if(_isSuccess) LoadingManager.LoadScene("InGame");
+    }
+        
     //어드레서블 초기화 (혹시나 안될 수 있어서 막기위해 사용)
     private IEnumerator InitAddressable()
     {
@@ -54,20 +89,27 @@ public class InitManager : MonoBehaviour
             _patchSize += handle.Result;
         }
 
-        //업데이트 항목이 있는지 체크
+        //업데이트 항목이 있는지 체크 없으면 바로 인게임
         if (_patchSize > decimal.Zero)
         {
-            WaitMessege.SetActive(false);
-            DownMessege.SetActive(true);
+            _waitMessegeTxt.gameObject.SetActive(false);
+            _DownMessege.SetActive(true);
 
-            SizeInfoTxt.text = "" + GetFileSize(_patchSize);
+            _sizeInfoTxt.text = "" + GetFileSize(_patchSize);
         }
         else
         {
-            DownValTxt.text = " 100 % ";
-            DownSlider.value = 1f;
+            _downValTxt.text = " 100 % ";
+            _downSlider.value = 1f;
             yield return new WaitForSeconds(2f);
-            LoadingManager.LoadScene("InGame");
+            
+            //모든 준비가 완료 됐으면
+
+            _waitMessegeTxt.text = "Success!!";
+            
+            _isSuccess = true;
+            _isUserData = true;
+            //LoadingManager.LoadScene("InGame");
         }
     }
 
@@ -99,11 +141,13 @@ public class InitManager : MonoBehaviour
 
     #region DownLoad
 
+    //다운로드 버튼
     public void Button_DownLoad()
     {
         StartCoroutine(PatchFiles());
     }
 
+    //패치 파일 저장
     private IEnumerator PatchFiles()
     {
         var labels = new List<string> { DefaultLabel.labelString };
@@ -123,6 +167,7 @@ public class InitManager : MonoBehaviour
         yield return CheckDownLoad();
     }
 
+    //패치 파일 다운로드
     private IEnumerator DownLoadLabel(string label)
     {
         _patchMap.Add(label, 0);
@@ -138,22 +183,24 @@ public class InitManager : MonoBehaviour
         _patchMap[label] = handle.GetDownloadStatus().TotalBytes;
         Addressables.Release(handle);
     }
-
+    
+    //패치 상태  
     private IEnumerator CheckDownLoad()
     {
         var total = 0f;
-        DownValTxt.text = " 0 % ";
+        _downValTxt.text = " 0 % ";
         
         while (true)
         {
             total += _patchMap.Sum(tmp => tmp.Value);
 
-            DownSlider.value = total / _patchSize;
-            DownValTxt.text = (int)(DownSlider.value * 100) + " % ";
+            _downSlider.value = total / _patchSize;
+            _downValTxt.text = (int)(_downSlider.value * 100) + " % ";
 
             if (total  == _patchSize)
             {
-                LoadingManager.LoadScene("InGame");
+                _isSuccess = true;
+                //LoadingManager.LoadScene("InGame");
                 break;
             }
 

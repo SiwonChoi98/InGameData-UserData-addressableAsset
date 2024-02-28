@@ -20,6 +20,7 @@ public class AddressableManager : MonoBehaviour
         ReleaseObj();
     }
     
+    //어드레서블 오브젝트 생성
     private void SpawnObj()
     {
         _test1Obj.InstantiateAsync().Completed += (obj) =>
@@ -28,6 +29,7 @@ public class AddressableManager : MonoBehaviour
         };
     }
 
+    //어드레서블 오브젝트 해제
     private void ReleaseObj()
     {
         if (Input.GetKeyDown(KeyCode.Space))

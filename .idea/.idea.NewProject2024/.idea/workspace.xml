@@ -6,13 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Init.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Init.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Loading.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scenes/Loading.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Make.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scenes/Make.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/InitManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/InitManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/AddressableManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/AddressableManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/MakeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/MakeUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +32,9 @@
       </branch-storage>
     </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/UnityProject/NewProject2024/Assets/Projects/Scenes/Make.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -117,7 +118,8 @@
       <workItem from="1708784556517" duration="74000" />
       <workItem from="1708863441080" duration="4706000" />
       <workItem from="1708913082455" duration="4620000" />
-      <workItem from="1709008428162" duration="4946000" />
+      <workItem from="1709008428162" duration="5160000" />
+      <workItem from="1709100815260" duration="1270000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료">
       <option name="closed" value="true" />
@@ -143,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708918639606</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[Fix] 메인화면까지 플로우 1차 수정">
+      <option name="closed" value="true" />
+      <created>1709013764078</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709013764079</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +178,7 @@
     <MESSAGE value="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료" />
     <MESSAGE value="[Feat_Asset] 추가 유닛 생성 에셋 추가" />
     <MESSAGE value="[Feat_Test] 어드레서블 서버 에셋 테스트 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Feat_Test] 어드레서블 서버 에셋 테스트 완료" />
+    <MESSAGE value="[Fix] 메인화면까지 플로우 1차 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Fix] 메인화면까지 플로우 1차 수정" />
   </component>
 </project>

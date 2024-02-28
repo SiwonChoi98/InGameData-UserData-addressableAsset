@@ -50,7 +50,7 @@ public class SplashUI : MonoBehaviour
         //업데이트 파일 있는지 체크 (AWS 에서 받음)
         yield return CheckUpdateFiles();
         
-        //로그인 창 띄움 //게스트 로그인
+        //로그인 창 띄움 //게스트 로그인 (플레이 팹에 계정생성)
         
         //로그인 시 정보 있는지 없는지 체크
         

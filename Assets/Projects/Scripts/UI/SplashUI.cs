@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Slider = UnityEngine.UI.Slider;
+
+
 
 public class SplashUI : MonoBehaviour
 {
@@ -32,6 +36,7 @@ public class SplashUI : MonoBehaviour
     [Header("Label")] 
     public AssetLabelReference DefaultLabel;
     
+    
     private IEnumerator Start()
     {
         _isSuccess = false;
@@ -50,9 +55,13 @@ public class SplashUI : MonoBehaviour
         //업데이트 파일 있는지 체크 (AWS 에서 받음)
         yield return CheckUpdateFiles();
         
+        //스펙 json 파일 -> 스펙 데이터 저장
+        
         //로그인 창 띄움 //게스트 로그인 (플레이 팹에 계정생성)
         
         //로그인 시 정보 있는지 없는지 체크
+        
+        //로그인 데이터 -> 인게임 데이터 저장
         
         //씬 이동 가능 상태 버튼/텍스트 활성화
         _guestLoginObj.SetActive(true);
@@ -60,6 +69,7 @@ public class SplashUI : MonoBehaviour
 
     public void Button_MoveToMain()
     {
+        //if(Userdata.IsClass == false)
         //계정 체크 후 이동
         if(_isSuccess && _isUserData) LoadingManager.LoadScene("Make");
         else if(_isSuccess) LoadingManager.LoadScene("InGame");

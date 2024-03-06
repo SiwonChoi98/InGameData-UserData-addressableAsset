@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="[Fix] 추가 유닛 생성 변경 및 1차 스펙데이터 구조 추가">
+    <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Spec/monster.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Spec/monster.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Spec/monsterEncrypt.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Spec/monsterEncrypt.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/InGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scenes/InGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/SpecDataManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/SpecDataManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Spec.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/InGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/InGameUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +39,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/aa/2c329d34/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/97/cf7bc330/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/Datas/UserData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/Manager/SpecDataManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProject/NewProject2024/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/Spec/ISpecData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/Spec/SpecDataManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -101,10 +103,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23360">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="74056">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23360" />
+      <option name="pid" value="74056" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -131,7 +133,8 @@
       <workItem from="1709263424734" duration="23027000" />
       <workItem from="1709299385256" duration="1455000" />
       <workItem from="1709544708597" duration="4842000" />
-      <workItem from="1709613263854" duration="2529000" />
+      <workItem from="1709613263854" duration="3536000" />
+      <workItem from="1709735256343" duration="5688000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료">
       <option name="closed" value="true" />
@@ -181,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709613419929</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[Fix] CustomEditor 수정 (Resources에 있는 textasset 전부 가져와서 한꺼번에 진행)">
+      <option name="closed" value="true" />
+      <created>1709616213779</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709616213779</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +220,26 @@
     <MESSAGE value="[Fix] 메인화면까지 플로우 1차 수정" />
     <MESSAGE value="[Feat_Asset] 플레이팹 SDK 추가" />
     <MESSAGE value="[Fix] 추가 유닛 생성 변경 및 1차 스펙데이터 구조 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Fix] 추가 유닛 생성 변경 및 1차 스펙데이터 구조 추가" />
+    <MESSAGE value="[Fix] CustomEditor 수정 (Resources에 있는 textasset 전부 가져와서 한꺼번에 진행)" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Fix] CustomEditor 수정 (Resources에 있는 textasset 전부 가져와서 한꺼번에 진행)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Projects/Scripts/SpecDatas/SpecDataManager.cs</url>
+          <line>100</line>
+          <properties documentPath="D:\UnityProject\NewProject2024\Assets\Projects\Scripts\SpecDatas\SpecDataManager.cs" initialLine="97" containingFunctionPresentation="Method 'PreInitialization'">
+            <startOffsets>
+              <option value="2399" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2400" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

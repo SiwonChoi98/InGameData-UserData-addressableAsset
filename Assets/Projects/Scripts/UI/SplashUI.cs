@@ -41,6 +41,7 @@ public class SplashUI : MonoBehaviour
     {
         _isSuccess = false;
         _isUserData = false;
+        
         _waitMessegeTxt.text = "Update Check...";
         
         _waitMessegeTxt.gameObject.SetActive(true);
@@ -51,11 +52,14 @@ public class SplashUI : MonoBehaviour
         
         //어드레서블 초기화
         yield return InitAddressable();
-        
+        _waitMessegeTxt.text = "어드레서블 에셋 초기화 완료";
         //업데이트 파일 있는지 체크 (AWS 에서 받음)
-        yield return CheckUpdateFiles();
         
+        yield return CheckUpdateFiles();
+        _waitMessegeTxt.text = "업데이트 체크 완료";
         //스펙 json 파일 -> 스펙 데이터 저장
+        yield return SpecDataManager.Instance.Load();
+        _waitMessegeTxt.text = "스펙데이터 다운로드 완료";
         
         //로그인 창 띄움 //게스트 로그인 (플레이 팹에 계정생성)
         
@@ -114,8 +118,6 @@ public class SplashUI : MonoBehaviour
             yield return new WaitForSeconds(2f);
             
             //모든 준비가 완료 됐으면
-
-            _waitMessegeTxt.text = "Success!!";
             
             _isSuccess = true;
             _isUserData = true;

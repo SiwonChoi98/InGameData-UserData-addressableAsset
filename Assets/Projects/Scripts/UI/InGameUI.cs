@@ -1,17 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InGameUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         
     }
+    
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            Debug.Log("spec monster " + SpecDataManager.Instance.Monster.Get(i+1000).hp);
+        }
+        
+    }
+    
+    private void Update()
     {
         
     }

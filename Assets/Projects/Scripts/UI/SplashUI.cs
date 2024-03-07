@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -53,14 +55,17 @@ public class SplashUI : MonoBehaviour
         //어드레서블 초기화
         yield return InitAddressable();
         _waitMessegeTxt.text = "어드레서블 에셋 초기화 완료";
-        //업데이트 파일 있는지 체크 (AWS 에서 받음)
         
+        //업데이트 파일 있는지 체크 (AWS 에서 받음)
         yield return CheckUpdateFiles();
         _waitMessegeTxt.text = "업데이트 체크 완료";
-        //스펙 json 파일 -> 스펙 데이터 저장
-        yield return SpecDataManager.Instance.Load();
+        
+        //스펙 csv 파일 -> 스펙 데이터 저장
+        //yield return SpecDataManager.Instance.Load();
         _waitMessegeTxt.text = "스펙데이터 다운로드 완료";
         
+        yield return DecryptAndParseCSV();
+      
         //로그인 창 띄움 //게스트 로그인 (플레이 팹에 계정생성)
         
         //로그인 시 정보 있는지 없는지 체크
@@ -86,7 +91,7 @@ public class SplashUI : MonoBehaviour
         yield return init;
     }
 
-    #region Check Down 
+    #region 패치 파일 체크 
     
     private IEnumerator CheckUpdateFiles()
     {
@@ -115,7 +120,7 @@ public class SplashUI : MonoBehaviour
         {
             _downValTxt.text = " 100 % ";
             _downSlider.value = 1f;
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             
             //모든 준비가 완료 됐으면
             
@@ -151,7 +156,7 @@ public class SplashUI : MonoBehaviour
     
     #endregion
 
-    #region DownLoad
+    #region 패치 파일 다운로드
 
     //다운로드 버튼
     public void Button_DownLoad()
@@ -222,4 +227,62 @@ public class SplashUI : MonoBehaviour
     }
     #endregion
    
+    #region 복호화, 파싱, 데이터 저장
+    public IEnumerator DecryptAndParseCSV()
+    {
+        TextAsset[] encryptedTextAssets = Resources.LoadAll<TextAsset>("Spec");
+
+        foreach (TextAsset encryptedTextAsset in encryptedTextAssets)
+        {
+            // 복호화할 파일 경로 설정
+            string encryptedFilePath = "Assets/Resources/Spec/" + encryptedTextAsset.name + ".csv";
+            
+            // 암호화된 파일을 복호화하여 메모리에 로드
+            byte[] encryptedData = File.ReadAllBytes(encryptedFilePath);
+            byte[] key = SpecDataManager._key;
+            byte[] iv = new byte[16]; // IV는 암호화 파일의 첫 16바이트에 저장되어 있음
+            Array.Copy(encryptedData, iv, iv.Length);
+            byte[] encryptedBytes = new byte[encryptedData.Length - iv.Length];
+            Array.Copy(encryptedData, iv.Length, encryptedBytes, 0, encryptedBytes.Length);
+
+            string decryptedData = DecryptStringFromBytes(encryptedBytes, key, iv);
+
+            // 복호화된 데이터를 파싱하여 처리
+            ParseCSV(encryptedTextAsset.name, decryptedData);
+        }
+
+        return null;
+    }
+    private string DecryptStringFromBytes(byte[] cipherText, byte[] key, byte[] iv)
+    {
+        // 암호화된 데이터를 복호화
+        using (Aes aesAlg = Aes.Create())
+        {
+            aesAlg.Key = key;
+            aesAlg.IV = iv;
+
+            ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+            using (MemoryStream msDecrypt = new MemoryStream(cipherText))
+            {
+                using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                {
+                    using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                    {
+                        return srDecrypt.ReadToEnd();
+                    }
+                }
+            }
+        }
+    }
+    
+    private void ParseCSV(string specTextAssetName,string csvData)
+    {
+        // CSV 데이터 파싱하여 처리하는 로직을 여기에 추가
+        string[] lines = csvData.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+        
+        SpecDataManager.Instance.SpecToInnerDatas(specTextAssetName, lines);
+    }
+    
+    #endregion
 }

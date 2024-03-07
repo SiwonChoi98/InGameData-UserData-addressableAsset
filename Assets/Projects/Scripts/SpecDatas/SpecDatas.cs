@@ -10,11 +10,11 @@ public class Monster
     public int mp;
 }
 
-
-/*
 public class Stage
 {
     public int id;
+    public int stage;
+    public int enemyCount;
+    public int clearCount;
     
 }
-*/

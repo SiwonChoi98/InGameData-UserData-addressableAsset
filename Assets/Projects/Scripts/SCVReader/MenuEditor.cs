@@ -9,15 +9,19 @@ using Unity.VisualScripting;
 using UnityEngine.UI;
 using Newtonsoft.Json;
 using System.Security.Cryptography;
+using System.Text;
 
 public class MenuEditor
 {
-    public static string csvPath = ".csv";
-    public static string csvFilePath = "Assets/Resources/Spec/";
-    public static string resourcesLoadAllPath = "Spec/";
-    public static string encryptedcsvFilePath = "Assets/Resources/Spec/";
+    /// <summary>
+    /// 파일경로는 빌드 후 기기에서 다시 체크
+    /// </summary>
+    private static string csvPath = ".csv";
+    private static string csvFilePath = "Assets/Resources/Spec/";
+    private static string resourcesLoadAllPath = "Spec/";
+    private static string encryptedcsvFilePath = "Assets/Resources/Spec/";
 
-    private static string encryptionKey = "aksn&%#!wjsaghws#$$%%@lwjka";
+    private static string encryptionKey = "sadmjdnqwj#^";
     
     
     [MenuItem("Custom/CSV 파일 암호화/적용하기")]
@@ -33,18 +37,10 @@ public class MenuEditor
             
             string fileName = textAsset[i].name;
             
-            csvFilePath += fileName;
-            csvFilePath += csvPath;
+            csvFilePath += fileName + csvPath;
+            encryptedcsvFilePath += fileName + "Encrypt" + csvPath;
 
-            encryptedcsvFilePath += fileName;
-            encryptedcsvFilePath += "Encrypt";
-            encryptedcsvFilePath += csvPath;
-            
-            byte[] keyBytes = new byte[32];
-            RandomNumberGenerator.Create().GetBytes(keyBytes);
-            string encryptionKey = Convert.ToBase64String(keyBytes);
-        
-            byte[] key = Convert.FromBase64String(encryptionKey);
+            byte[] key = SpecDataManager._key;
             using (Aes aesAlg = Aes.Create())
             {
                 aesAlg.Key = key;
@@ -74,9 +70,7 @@ public class MenuEditor
             string fileName = textAsset[i].name;
             
             csvFilePath = "Assets/Resources/Spec/";
-            
-            csvFilePath += fileName;
-            csvFilePath += csvPath;
+            csvFilePath += fileName + csvPath;
             
             File.Delete(csvFilePath);
             

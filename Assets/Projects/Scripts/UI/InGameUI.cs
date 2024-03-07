@@ -14,11 +14,7 @@ public class InGameUI : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < 20; i++)
-        {
-            Debug.Log("spec monster " + SpecDataManager.Instance.Monster.Get(i+1000).hp);
-        }
-        
+        Debug.Log(SpecDataManager.Instance.Monster.Get(1003).mp);
     }
     
     private void Update()

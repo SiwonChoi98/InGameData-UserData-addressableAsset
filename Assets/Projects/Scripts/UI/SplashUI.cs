@@ -60,12 +60,10 @@ public class SplashUI : MonoBehaviour
         yield return CheckUpdateFiles();
         _waitMessegeTxt.text = "업데이트 체크 완료";
         
-        //스펙 csv 파일 -> 스펙 데이터 저장
-        //yield return SpecDataManager.Instance.Load();
+        //스펙 csv 파일 -> 인 스펙 데이터 저장
+        yield return DecryptAndParseCSV();
         _waitMessegeTxt.text = "스펙데이터 다운로드 완료";
         
-        yield return DecryptAndParseCSV();
-      
         //로그인 창 띄움 //게스트 로그인 (플레이 팹에 계정생성)
         
         //로그인 시 정보 있는지 없는지 체크
@@ -88,6 +86,7 @@ public class SplashUI : MonoBehaviour
     private IEnumerator InitAddressable()
     {
         var init = Addressables.InitializeAsync();
+        Debug.Log("어드레서블 초기화 완료");
         yield return init;
     }
 

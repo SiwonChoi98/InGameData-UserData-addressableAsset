@@ -78,36 +78,4 @@ public class MenuEditor
         }
         
     }
-
-    //[MenuItem("Custom/CSV 파일 복호화/적용하기")]
-    public static void DecryptCSV()
-    {
-        byte[] keyBytes = new byte[32];
-        RandomNumberGenerator.Create().GetBytes(keyBytes);
-        encryptionKey = Convert.ToBase64String(keyBytes);
-        
-        byte[] key = Convert.FromBase64String(encryptionKey);
-        using (Aes aesAlg = Aes.Create())
-        {
-            aesAlg.Key = key;
-            byte[] iv = new byte[aesAlg.BlockSize / 8];
-            using (FileStream fsInput = new FileStream(encryptedcsvFilePath, FileMode.Open))
-            {
-                fsInput.Read(iv, 0, iv.Length);
-                aesAlg.IV = iv;
-
-                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
-
-                using (CryptoStream csDecrypt = new CryptoStream(fsInput, decryptor, CryptoStreamMode.Read))
-                {
-                    using (FileStream fsOutput = new FileStream(csvFilePath, FileMode.Create))
-                    {
-                        csDecrypt.CopyTo(fsOutput);
-                    }
-                }
-            }
-        }
-        Debug.Log("복호화 success");
-    }
-    
 }

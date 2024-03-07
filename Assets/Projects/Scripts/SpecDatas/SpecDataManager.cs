@@ -8,6 +8,9 @@ public partial class SpecDataManager
 {
     public static SpecDataManager Instance = new SpecDataManager();
     
+    /// <summary>
+    /// 암호키 경로 다시 체크
+    /// </summary>
     public static readonly byte[] _key = {38, 37, 64, 111, 92, 69, 80, 101, 93, 60, 44, 56, 101, 103, 70, 42};
 }
 partial class SpecDataManager
@@ -15,22 +18,12 @@ partial class SpecDataManager
     public ISpecData<int, Monster> Monster { get; private set; }
     public ISpecData<int, Stage> Stage { get; private set; }
 
-    //스펙 데이터 불러오기
-    /*public bool Load()
-    {
-        try
-        {
-            SpecToInnerDatas();
-        }
-        catch (Exception e)
-        {
-            Debug.LogError(e.ToString());
-            return false;
-        }
-
-        return true;
-    }*/
-    
+    /// 파싱 시 i 번호
+    ///  0번 - 주소
+    ///  1번 - 변수명
+    ///  2번 - 데이터 타입
+    ///  3번 부터 진행
+   
     public void SpecToInnerDatas(string typeName, string[] lines) //InnerDatas jsonData
     {
         switch (typeName)
@@ -47,16 +40,10 @@ partial class SpecDataManager
                 break;
                 
         }
-        Debug.Log(typeName + "데이터 저장 완료");
+        Debug.Log(typeName + " 데이터 저장 완료");
     }
     
 }
-
-/// 파싱시 i 번호
-///  0번 - 주소
-///  1번 - 변수명
-///  2번 - 데이터 타입
-///  3번 부터 진행
 partial class SpecDataManager
 {
     public class InnerDataMonster : ISpecData<int, Monster>

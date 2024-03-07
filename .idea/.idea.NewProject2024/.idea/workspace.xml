@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="">
+    <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="[Feat] 테스트 암호화 csv 파일 추가">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SpecDatas/SpecDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/SpecDatas/SpecDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SpecDatas/SpecDatas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/SpecDatas/SpecDatas.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/InGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/InGameUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Spec/classEncrypt.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Spec/classEncrypt.csv.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Spec/monsterEncrypt.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Spec/monsterEncrypt.csv.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +132,7 @@
       <workItem from="1709544708597" duration="4842000" />
       <workItem from="1709613263854" duration="3536000" />
       <workItem from="1709735256343" duration="5735000" />
-      <workItem from="1709780288053" duration="13522000" />
+      <workItem from="1709780288053" duration="14269000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료">
       <option name="closed" value="true" />
@@ -203,7 +198,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709741002303</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[Fix] 스펙 데이터 구조 수정 완료 (추후 수정 예정)">
+      <option name="closed" value="true" />
+      <created>1709817898844</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709817898844</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[Feat] 테스트 암호화 csv 파일 추가">
+      <option name="closed" value="true" />
+      <created>1709817928622</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709817928622</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +244,8 @@
     <MESSAGE value="[Fix] 추가 유닛 생성 변경 및 1차 스펙데이터 구조 추가" />
     <MESSAGE value="[Fix] CustomEditor 수정 (Resources에 있는 textasset 전부 가져와서 한꺼번에 진행)" />
     <MESSAGE value="[Feat] 스펙 데이터 구조 1차 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Feat] 스펙 데이터 구조 1차 완료" />
+    <MESSAGE value="[Fix] 스펙 데이터 구조 수정 완료 (추후 수정 예정)" />
+    <MESSAGE value="[Feat] 테스트 암호화 csv 파일 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Feat] 테스트 암호화 csv 파일 추가" />
   </component>
 </project>

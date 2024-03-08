@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="" />
+    <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/InGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/InGameUI.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +130,7 @@
       <workItem from="1709735256343" duration="5735000" />
       <workItem from="1709780288053" duration="14795000" />
       <workItem from="1709873884811" duration="3057000" />
-      <workItem from="1709908075884" duration="651000" />
+      <workItem from="1709908075884" duration="789000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료">
       <option name="closed" value="true" />

@@ -14,7 +14,7 @@ public class InGameUI : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(SpecDataManager.Instance.Stage.Get(1003).clearCount);
+        //Debug.Log(SpecDataManager.Instance.Stage.Get(1003).clearCount);
     }
     
     private void Update()

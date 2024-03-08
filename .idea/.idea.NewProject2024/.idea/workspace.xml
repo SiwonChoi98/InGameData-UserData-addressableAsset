@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Datas.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Datas/UserData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Datas/UserData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/DataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/CSVReader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/CSVReader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs.meta" beforeDir="false" />
-    </list>
+    <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +126,7 @@
       <workItem from="1709613263854" duration="3536000" />
       <workItem from="1709735256343" duration="5735000" />
       <workItem from="1709780288053" duration="14795000" />
-      <workItem from="1709873884811" duration="2415000" />
+      <workItem from="1709873884811" duration="3057000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료">
       <option name="closed" value="true" />
@@ -227,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709818712480</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[Feat] 유저 데이터 저장 구조 1차">
+      <option name="closed" value="true" />
+      <created>1709876334587</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709876334587</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +257,7 @@
     <MESSAGE value="[Fix] 스펙 데이터 구조 수정 완료 (추후 수정 예정)" />
     <MESSAGE value="[Feat] 테스트 암호화 csv 파일 추가" />
     <MESSAGE value="[Fix] 코드 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Fix] 코드 수정" />
+    <MESSAGE value="[Feat] 유저 데이터 저장 구조 1차" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Feat] 유저 데이터 저장 구조 1차" />
   </component>
 </project>

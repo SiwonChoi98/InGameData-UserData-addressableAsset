@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="[Feat] 테스트 암호화 csv 파일 추가">
+    <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SpecDatas/SpecDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/SpecDatas/SpecDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/InGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/InGameUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Datas.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Datas/UserData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Datas/UserData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/DataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/CSVReader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/CSVReader.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +42,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/88e4733ac7bc4ae1b496735e6b83bbd346ac00/aa/2c329d34/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/97/cf7bc330/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b2856ca068a85f5ce4a0462fdd6462e56463d4b04c303e873a2783e049125f45/System.Security.Cryptography.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/Datas/UserData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/SCVReader/MenuEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/MenuEditor/EnumDefine.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -100,10 +104,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21460">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="21460" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -132,7 +136,8 @@
       <workItem from="1709544708597" duration="4842000" />
       <workItem from="1709613263854" duration="3536000" />
       <workItem from="1709735256343" duration="5735000" />
-      <workItem from="1709780288053" duration="14269000" />
+      <workItem from="1709780288053" duration="14795000" />
+      <workItem from="1709873884811" duration="2415000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료">
       <option name="closed" value="true" />
@@ -214,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709817928622</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[Fix] 코드 수정">
+      <option name="closed" value="true" />
+      <created>1709818712480</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709818712480</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +259,7 @@
     <MESSAGE value="[Feat] 스펙 데이터 구조 1차 완료" />
     <MESSAGE value="[Fix] 스펙 데이터 구조 수정 완료 (추후 수정 예정)" />
     <MESSAGE value="[Feat] 테스트 암호화 csv 파일 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Feat] 테스트 암호화 csv 파일 추가" />
+    <MESSAGE value="[Fix] 코드 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Fix] 코드 수정" />
   </component>
 </project>

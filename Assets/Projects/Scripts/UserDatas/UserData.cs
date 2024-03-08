@@ -11,7 +11,7 @@ public class UserData
     /// <summary>
     /// 유저가 캐릭터를 생성 했는지
     /// </summary>
-    public bool isClass;
+    public bool isMake;
     
     /// <summary>
     /// 마지막으로 플레이한 스테이지 ID
@@ -27,7 +27,5 @@ public class UserData
     /// 클리어한 스테이지 ID
     /// </summary>
     public int bestStageID;
-
-    
     
 }

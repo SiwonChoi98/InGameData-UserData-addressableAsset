@@ -14,7 +14,7 @@ public enum DataType : int
 
 
 //유저 데이터 관련
-public partial class DataManager : MonoBehaviour
+public partial class DataManager : Singleton<DataManager>
 {
     //public---------------------
     public UserData UserData => _user;
@@ -26,7 +26,7 @@ public partial class DataManager : MonoBehaviour
 }
 
 //유저 데이터 관리
-public partial class DataManager : MonoBehaviour
+public partial class DataManager : Singleton<DataManager>
 {
     public Action<double, double> CoinValueChanged;
     public Action<double, double> JewelValueChanged;

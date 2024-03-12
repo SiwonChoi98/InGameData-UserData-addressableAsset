@@ -15,6 +15,7 @@ public class InGameUI : MonoBehaviour
     private void Start()
     {
         //Debug.Log(SpecDataManager.Instance.Stage.Get(1003).clearCount);
+        //BattleManager.Instance.SingleTonTest();
     }
     
     private void Update()

@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scenes/Splash.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/BattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/BattleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/DataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/DataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/InGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/Manager/InGameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/InGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/InGameUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/MakeUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/MakeUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +41,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/97/cf7bc330/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b2856ca068a85f5ce4a0462fdd6462e56463d4b04c303e873a2783e049125f45/System.Security.Cryptography.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/MenuEditor/EnumDefine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/PlayFabs/PlayFabManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/Utills/DontDestroyObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/Util/MonoBehaviourCallbackHooks.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Projects/FortressSaga-develop/FortressSaga-develop/Assets/3rdParty/BiniLab/Common/Utils/DontDestroyObject.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,28 +58,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\qpqp6\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\qpqp6\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\qpqp6\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\qpqp6\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\qpqp6\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\qpqp6\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.21f1\Editor\Unity.exe" />
@@ -130,7 +141,8 @@
       <workItem from="1709735256343" duration="5735000" />
       <workItem from="1709780288053" duration="14795000" />
       <workItem from="1709873884811" duration="3057000" />
-      <workItem from="1709908075884" duration="789000" />
+      <workItem from="1709908075884" duration="860000" />
+      <workItem from="1710244391565" duration="3706000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료">
       <option name="closed" value="true" />
@@ -228,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709876334587</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="test">
+      <option name="closed" value="true" />
+      <created>1709908880657</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709908880657</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +282,7 @@
     <MESSAGE value="[Feat] 테스트 암호화 csv 파일 추가" />
     <MESSAGE value="[Fix] 코드 수정" />
     <MESSAGE value="[Feat] 유저 데이터 저장 구조 1차" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Feat] 유저 데이터 저장 구조 1차" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>

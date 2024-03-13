@@ -22,8 +22,8 @@ public class MenuEditor
     private static string encryptedcsvFilePath = "Assets/Resources/Spec/";
 
     private static string encryptionKey = "sadmjdnqwj#^";
-    
-    
+
+#if UNITY_EDITOR
     [MenuItem("Custom/CSV 파일 암호화/적용하기")]
     public static void EncryptCSV()
     {
@@ -78,4 +78,5 @@ public class MenuEditor
         }
         
     }
+#endif
 }

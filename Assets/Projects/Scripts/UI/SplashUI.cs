@@ -38,7 +38,12 @@ public class SplashUI : MonoBehaviour
     [Header("Label")] 
     public AssetLabelReference DefaultLabel;
     
-    
+    private void Awake()
+    {
+        //어드레서블 초기화
+        StartCoroutine(InitAddressable());
+    }
+
     private IEnumerator Start()
     {
         _isSuccess = false;
@@ -53,15 +58,15 @@ public class SplashUI : MonoBehaviour
         //네트워크가 제대로 작동하고 있는지 체크 (루프)
         
         //어드레서블 초기화
-        yield return InitAddressable();
-        _waitMessegeTxt.text = "어드레서블 에셋 초기화 완료";
+        //yield return InitAddressable();
+        //_waitMessegeTxt.text = "어드레서블 에셋 초기화 완료";
         
         //업데이트 파일 있는지 체크 (AWS 에서 받음)
         yield return CheckUpdateFiles();
         _waitMessegeTxt.text = "업데이트 체크 완료";
         
         //스펙 csv 파일 -> 인 스펙 데이터 저장
-        yield return DecryptAndParseCSV();
+        yield return DecryptAndParseCSV(); 
         _waitMessegeTxt.text = "스펙데이터 다운로드 완료";
         
         //로그인 창 띄움 //게스트 로그인 (플레이 팹에 계정생성)
@@ -201,6 +206,7 @@ public class SplashUI : MonoBehaviour
     }
     
     //패치 상태  
+    // ReSharper disable Unity.PerformanceAnalysis
     private IEnumerator CheckDownLoad()
     {
         var total = 0f;
@@ -215,7 +221,8 @@ public class SplashUI : MonoBehaviour
 
             if (total  == _patchSize)
             {
-                _isSuccess = true;
+                //패치 이후 다시 체크
+                StartCoroutine(Start());
                 //LoadingManager.LoadScene("InGame");
                 break;
             }

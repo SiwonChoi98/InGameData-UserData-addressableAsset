@@ -1275,8 +1275,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InitManager, Assembly-CSharp
+      - m_Target: {fileID: 578371819}
+        m_TargetAssemblyTypeName: SplashUI, Assembly-CSharp
         m_MethodName: Button_DownLoad
         m_Mode: 1
         m_Arguments:

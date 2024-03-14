@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scenes/Splash.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/MenuEditor/MenuEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/MenuEditor/MenuEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerData/StandaloneWindows64/catalog_2024.02.25.16.01.40.hash" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerData/StandaloneWindows64/catalog_2024.02.25.16.01.40.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerData/StandaloneWindows64/catalog_2024.02.26.02.50.31.hash" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerData/StandaloneWindows64/catalog_2024.02.26.02.50.31.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerData/StandaloneWindows64/defaultlocalgroup_assets_all_6ee41f3eb492997cd2e21d0d2a725055.bundle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerData/StandaloneWindows64/f68efa11b36c022c9d5cdaa0cbf3368b_unitybuiltinshaders_5fd12db6a0e7351ebce706c118fc5870.bundle" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +142,8 @@
       <workItem from="1709873884811" duration="3057000" />
       <workItem from="1709908075884" duration="860000" />
       <workItem from="1710244391565" duration="3706000" />
+      <workItem from="1710387966111" duration="2076000" />
+      <workItem from="1710426885843" duration="2679000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료">
       <option name="closed" value="true" />
@@ -256,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709908880657</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="[Fix] 패치 있을 때 다운로드 후 연결 수정">
+      <option name="closed" value="true" />
+      <created>1710347447107</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1710347447107</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +292,7 @@
     <MESSAGE value="[Fix] 코드 수정" />
     <MESSAGE value="[Feat] 유저 데이터 저장 구조 1차" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="[Fix] 패치 있을 때 다운로드 후 연결 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Fix] 패치 있을 때 다운로드 후 연결 수정" />
   </component>
 </project>

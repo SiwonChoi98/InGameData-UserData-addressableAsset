@@ -57,10 +57,6 @@ public class SplashUI : MonoBehaviour
         
         //네트워크가 제대로 작동하고 있는지 체크 (루프)
         
-        //어드레서블 초기화
-        //yield return InitAddressable();
-        //_waitMessegeTxt.text = "어드레서블 에셋 초기화 완료";
-        
         //업데이트 파일 있는지 체크 (AWS 에서 받음)
         yield return CheckUpdateFiles();
         _waitMessegeTxt.text = "업데이트 체크 완료";
@@ -237,22 +233,19 @@ public class SplashUI : MonoBehaviour
     public IEnumerator DecryptAndParseCSV()
     {
         TextAsset[] encryptedTextAssets = Resources.LoadAll<TextAsset>("Spec");
-
+        
         foreach (TextAsset encryptedTextAsset in encryptedTextAssets)
         {
-            // 복호화할 파일 경로 설정
-            string encryptedFilePath = "Assets/Resources/Spec/" + encryptedTextAsset.name + ".csv";
-            
             // 암호화된 파일을 복호화하여 메모리에 로드
-            byte[] encryptedData = File.ReadAllBytes(encryptedFilePath);
+            byte[] encryptedData = encryptedTextAsset.bytes;
             byte[] key = SpecDataManager._key;
             byte[] iv = new byte[16]; // IV는 암호화 파일의 첫 16바이트에 저장되어 있음
             Array.Copy(encryptedData, iv, iv.Length);
             byte[] encryptedBytes = new byte[encryptedData.Length - iv.Length];
             Array.Copy(encryptedData, iv.Length, encryptedBytes, 0, encryptedBytes.Length);
-
+            
             string decryptedData = DecryptStringFromBytes(encryptedBytes, key, iv);
-
+            
             // 복호화된 데이터를 파싱하여 처리
             ParseCSV(encryptedTextAsset.name, decryptedData);
         }

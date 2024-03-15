@@ -66,7 +66,6 @@ public class SplashUI : MonoBehaviour
         _waitMessegeTxt.text = "스펙데이터 다운로드 완료";
         
         //로그인 창 띄움 //게스트 로그인 (플레이 팹에 계정생성)
-        
         //로그인 시 정보 있는지 없는지 체크
         
         //로그인 데이터 -> 인게임 데이터 저장
@@ -75,14 +74,27 @@ public class SplashUI : MonoBehaviour
         _guestLoginObj.SetActive(true);
     }
 
-    public void Button_MoveToMain()
+    //씬 이동
+    public void OnClick_MoveToMain()
     {
         //if(Userdata.IsClass == false)
+        PlayfabManager.Instance.OnClickGuestLogin();
         //계정 체크 후 이동
         if(_isSuccess && _isUserData) LoadingManager.LoadScene("Make");
         else if(_isSuccess) LoadingManager.LoadScene("InGame");
     }
-        
+    
+    //게스트 로그인 키 삭제
+    public void OnClick_DeletePlayerPrefKey()
+    {
+        //플레이팹 사이트에서 아이디 삭제 후 이 동작까지 해줘야 함
+        if (PlayerPrefs.HasKey(PlayfabManager.Instance.PlayerPrefKey))
+        {
+            Debug.Log("플레이어 아이디 삭제 되었습니다.");
+            PlayerPrefs.DeleteKey(PlayfabManager.Instance.PlayerPrefKey);
+        }
+    }
+    
     //어드레서블 초기화 (혹시나 안될 수 있어서 막기위해 사용)
     private IEnumerator InitAddressable()
     {

@@ -20,6 +20,7 @@ public class DontDestroyObject : Singleton<DontDestroyObject>
         //시작 시 계속 유지되어야 할 매니저들은 여기서 셋팅
         SetSingleton<DataManager>();
         SetSingleton<BattleManager>();
+        SetSingleton<PlayfabManager>();
     }
 
     private void SetSingleton<T>()

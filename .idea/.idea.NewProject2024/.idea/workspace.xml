@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4f431f62-a282-428f-bb74-ea65a79334e5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NewProject2024/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scenes/Splash.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/MenuEditor/EnumDefine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/MenuEditor/EnumDefine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/PlayFabs/PlayFabManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/PlayFabs/PlayFabManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/UI/SplashUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Projects/Scripts/Utills/DontDestroyObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Projects/Scripts/Utills/DontDestroyObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +40,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba783288ca164d3099898a8819fcec1c159e00/97/cf7bc330/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b2856ca068a85f5ce4a0462fdd6462e56463d4b04c303e873a2783e049125f45/System.Security.Cryptography.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/MenuEditor/EnumDefine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProject/NewProject2024/Assets/Projects/Scripts/MenuEditor/MenuEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/PlayFabs/PlayFabManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProject/NewProject2024/Assets/Projects/Scripts/PlayFabs/PlayFabManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnityProject/NewProject2024/Assets/Projects/Scripts/UI/SplashUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Projects/Scripts/Utills/DontDestroyObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/Addressables.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/Util/MonoBehaviourCallbackHooks.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/UnityProject/NewProject2024/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Projects/FortressSaga-develop/FortressSaga-develop/Assets/3rdParty/BiniLab/Common/Utils/DontDestroyObject.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -143,7 +146,8 @@
       <workItem from="1709908075884" duration="860000" />
       <workItem from="1710244391565" duration="3706000" />
       <workItem from="1710387966111" duration="2076000" />
-      <workItem from="1710426885843" duration="2679000" />
+      <workItem from="1710426885843" duration="3286000" />
+      <workItem from="1710483326123" duration="3450000" />
     </task>
     <task id="LOCAL-00001" summary="[Feat_Test] 어드레서블 로컬 에셋 테스트 완료">
       <option name="closed" value="true" />
@@ -257,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710347447107</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="[Fix] 암호화 파일 불러오기 경로 수정">
+      <option name="closed" value="true" />
+      <created>1710429686918</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1710429686918</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +305,7 @@
     <MESSAGE value="[Feat] 유저 데이터 저장 구조 1차" />
     <MESSAGE value="test" />
     <MESSAGE value="[Fix] 패치 있을 때 다운로드 후 연결 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Fix] 패치 있을 때 다운로드 후 연결 수정" />
+    <MESSAGE value="[Fix] 암호화 파일 불러오기 경로 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Fix] 암호화 파일 불러오기 경로 수정" />
   </component>
 </project>

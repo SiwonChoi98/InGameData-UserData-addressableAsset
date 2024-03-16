@@ -8,7 +8,7 @@
 
 #### [유저 데이터 저장 방법] 
 
-PlayFab 사용 - 10만 유저 정보까지 무료 제공
+PlayFab 서버 사용 - 10만 유저 정보까지 무료 제공
 
 저장)
 
@@ -36,7 +36,7 @@ Excel -> Csv -> Encrypt -> Local -> InGame Data
 
 게임에서 필요한 에셋은 addressable 이용 (일부 제외) 
 
-addressable 에셋은 aws s3에서 받아온다.
+addressable 에셋은 aws s3 서버에서 받아온다.
 
 방법)
 

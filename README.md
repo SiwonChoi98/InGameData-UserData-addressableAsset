@@ -8,6 +8,16 @@
 
 #### [유저 데이터 저장 방법] 
 
+PlayFab 사용 - 10만 유저 정보까지 무료 제공
+
+저장)
+
+UserData -> Json -> PlayFab Save
+
+불러오기)
+
+PlayFab UserId -> Json -> UserData
+
 #### [인게임 데이터 불러오는 방법] 
 
 Excel -> Csv -> Encrypt -> Local -> InGame Data

@@ -6,6 +6,8 @@
 
 PlayFab 서버 사용 - 10만 유저 정보까지 무료 제공
 
+아이디 생성이 우선 -> 아이디 key를 가지고 data 저장
+
 저장)
 
 UserData -> Json -> PlayFab Save

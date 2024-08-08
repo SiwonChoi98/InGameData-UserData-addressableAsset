@@ -95,4 +95,37 @@ public class PlayfabManager : Singleton<PlayfabManager>
         _entityId = result.EntityToken.Entity.Id;
         _entityType = result.EntityToken.Entity.Type;
     }
+
+    public void SaveAppearance()
+    {
+        var request = new UpdateUserDataRequest
+        {
+            Data = new Dictionary<string, string>
+            {
+                { "Hat", "1" },
+                { "Top", "2" },
+                { "Bottom", "3" }
+            }
+        };
+        PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError);
+    }
+
+    public void GetAppearance()
+    {
+        PlayFabClientAPI.GetUserData(new GetUserDataRequest(), OnDataRecieved, OnError);
+    }
+
+    private void OnDataRecieved(GetUserDataResult result)
+    {
+        Debug.Log("Success UserData Recieved");
+    }
+    private void OnDataSend(UpdateUserDataResult result)
+    {   
+        Debug.Log("Success UserData Send");
+    }
+
+    private void OnError(PlayFabError error)
+    {
+        Debug.Log("Feild UserData");
+    }
 }

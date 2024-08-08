@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class InGameUI : MonoBehaviour
 {
+    
     private void Awake()
     {
         
@@ -14,12 +15,16 @@ public class InGameUI : MonoBehaviour
 
     private void Start()
     {
-        //Debug.Log(SpecDataManager.Instance.Stage.Get(1003).clearCount);
-        //BattleManager.Instance.SingleTonTest();
-    }
-    
-    private void Update()
-    {
         
+    }
+
+    public void Btn_SaveAppearance()
+    {
+        PlayfabManager.Instance.SaveAppearance();
+    }
+
+    public void Btn_GetAppearance()
+    {
+        PlayfabManager.Instance.GetAppearance();
     }
 }
